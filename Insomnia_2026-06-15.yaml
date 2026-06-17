@@ -1,0 +1,332 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Imported Collection
+meta:
+  id: wrk_6a1a578c3ddb40789c38aa5bcd617c27
+  created: 1781580882885
+  modified: 1781580882885
+  description: ""
+collection:
+  - name: Auth
+    meta:
+      id: fld_34b92db02478442fa822056e4d316311
+      created: 1781581005956
+      modified: 1781581005956
+      sortKey: -1781581005956
+      description: ""
+    children:
+      - url: http://localhost:8080/api/auth/login
+        name: Login
+        meta:
+          id: req_ef4946d3a1f74dc4bd53db72041f140e
+          created: 1781581043345
+          modified: 1781581077275
+          isPrivate: false
+          description: ""
+          sortKey: -1781581043345
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "username": "admin",
+              "password": "admin1234"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Categorias
+    meta:
+      id: fld_ca9dd2904539401f8cb1df1dd823318b
+      created: 1781581142109
+      modified: 1781581674985
+      sortKey: -1781581142109
+      description: ""
+    children:
+      - url: http://localhost:8080/api/categorias
+        name: Crear Categoria
+        meta:
+          id: req_494577d034b546fa83b8ccfcca959742
+          created: 1781581150761
+          modified: 1781581397752
+          isPrivate: false
+          description: ""
+          sortKey: -1781581150761
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nombre": "Manual",
+              "descripcion": "Productos manuales"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbiIsInJvbCI6IlNVUEVSLUFETUlOLVJPTEUiLCJpYXQiOjE3ODE1ODEwODMsImV4cCI6MTc4MTY2NzQ4M30.oey-lS21myCE8kE9wJLSiccfRvvq6glZ4Ie_SgOr_O9p0ST5GXae-d-x4gq3vD0T
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/api/categorias
+        name: Listar Categorias
+        meta:
+          id: req_ee00f528f90742adb6dab164e664135a
+          created: 1781581526035
+          modified: 1781581653012
+          isPrivate: false
+          description: ""
+          sortKey: -1781581526035
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbiIsInJvbCI6IlNVUEVSLUFETUlOLVJPTEUiLCJpYXQiOjE3ODE1ODEwODMsImV4cCI6MTc4MTY2NzQ4M30.oey-lS21myCE8kE9wJLSiccfRvvq6glZ4Ie_SgOr_O9p0ST5GXae-d-x4gq3vD0T
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/api/categorias/1
+        name: Actualizar Categoria
+        meta:
+          id: req_845d30c597584817b726a811ad2f650a
+          created: 1781581635302
+          modified: 1781581811289
+          isPrivate: false
+          description: ""
+          sortKey: -1781581635302
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nombre": "Electronica Actualizada",
+              "descripcion": "Descripcion actualizada"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbiIsInJvbCI6IlNVUEVSLUFETUlOLVJPTEUiLCJpYXQiOjE3ODE1ODEwODMsImV4cCI6MTc4MTY2NzQ4M30.oey-lS21myCE8kE9wJLSiccfRvvq6glZ4Ie_SgOr_O9p0ST5GXae-d-x4gq3vD0T
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/api/categorias/1
+        name: Eliminar Categoria
+        meta:
+          id: req_b442ddae63ab49ce8ef91820088369be
+          created: 1781581673395
+          modified: 1781581690814
+          isPrivate: false
+          description: ""
+          sortKey: -1781581673395
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbiIsInJvbCI6IlNVUEVSLUFETUlOLVJPTEUiLCJpYXQiOjE3ODE1ODEwODMsImV4cCI6MTc4MTY2NzQ4M30.oey-lS21myCE8kE9wJLSiccfRvvq6glZ4Ie_SgOr_O9p0ST5GXae-d-x4gq3vD0T
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Productos
+    meta:
+      id: fld_a4a1b8593a374e92b7dc3fd8cc24d44f
+      created: 1781581760316
+      modified: 1781581760316
+      sortKey: -1781581760316
+      description: ""
+    children:
+      - url: http://localhost:8080/api/productos
+        name: Listar Productos
+        meta:
+          id: req_4d0ae91d1b3d4c37a96a1e1c0a39eabd
+          created: 1781581767489
+          modified: 1781581879740
+          isPrivate: false
+          description: ""
+          sortKey: -1781581767489
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbiIsInJvbCI6IlNVUEVSLUFETUlOLVJPTEUiLCJpYXQiOjE3ODE1ODEwODMsImV4cCI6MTc4MTY2NzQ4M30.oey-lS21myCE8kE9wJLSiccfRvvq6glZ4Ie_SgOr_O9p0ST5GXae-d-x4gq3vD0T
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/api/productos
+        name: Crear Producto
+        meta:
+          id: req_8d8c4b16f9d24b77bd1eccc77b7f4658
+          created: 1781581779958
+          modified: 1781581877787
+          isPrivate: false
+          description: ""
+          sortKey: -1781581720442
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nombre": "Laptop",
+              "descripcion": "Laptop gamer",
+              "precio": 1500.00,
+              "cantidadStock": 10,
+              "categoria": {
+                "id": 1
+              }
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbiIsInJvbCI6IlNVUEVSLUFETUlOLVJPTEUiLCJpYXQiOjE3ODE1ODEwODMsImV4cCI6MTc4MTY2NzQ4M30.oey-lS21myCE8kE9wJLSiccfRvvq6glZ4Ie_SgOr_O9p0ST5GXae-d-x4gq3vD0T
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/api/productos/1
+        name: Actualizar Producto
+        meta:
+          id: req_278cbd14c9eb43c8b655ee0986ef0a71
+          created: 1781581899787
+          modified: 1781581936126
+          isPrivate: false
+          description: ""
+          sortKey: -1781581899787
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nombre": "Laptop Actualizada",
+              "descripcion": "Laptop gamer actualizada",
+              "precio": 1800.00,
+              "cantidadStock": 5,
+              "categoria": {
+                "id": 1
+              }
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbiIsInJvbCI6IlNVUEVSLUFETUlOLVJPTEUiLCJpYXQiOjE3ODE1ODEwODMsImV4cCI6MTc4MTY2NzQ4M30.oey-lS21myCE8kE9wJLSiccfRvvq6glZ4Ie_SgOr_O9p0ST5GXae-d-x4gq3vD0T
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/api/productos/1
+        name: Eliminar Producto
+        meta:
+          id: req_2e3f9c31c2b74b8ea8a675ad71d2496f
+          created: 1781581946075
+          modified: 1781581976571
+          isPrivate: false
+          description: ""
+          sortKey: -1781581946075
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbiIsInJvbCI6IlNVUEVSLUFETUlOLVJPTEUiLCJpYXQiOjE3ODE1ODEwODMsImV4cCI6MTc4MTY2NzQ4M30.oey-lS21myCE8kE9wJLSiccfRvvq6glZ4Ie_SgOr_O9p0ST5GXae-d-x4gq3vD0T
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_7f5fbfcca81c0db113180cb26f8b0ef4411b619f
+    created: 1781580883028
+    modified: 1781580883028
+environments:
+  name: Base Environment
+  meta:
+    id: env_7f5fbfcca81c0db113180cb26f8b0ef4411b619f
+    created: 1781580882896
+    modified: 1781580882896
+    isPrivate: false
