@@ -21,6 +21,11 @@ public class CategoriaController {
         return ResponseEntity.ok(categoriaService.listar());
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<Categoria> obtener(@PathVariable Long id) {
+        return ResponseEntity.ok(categoriaService.obtener(id));
+    }
+
     @PostMapping
     public ResponseEntity<Categoria> crear(@RequestBody Categoria categoria) {
         return ResponseEntity.ok(categoriaService.guardar(categoria));

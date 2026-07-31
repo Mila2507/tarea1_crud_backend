@@ -17,6 +17,11 @@ public class CategoriaService {
         return categoriaRepository.findAll();
     }
 
+    public Categoria obtener(Long id) {
+        return categoriaRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Categoría no encontrada"));
+    }
+
     public Categoria guardar(Categoria categoria) {
         return categoriaRepository.save(categoria);
     }

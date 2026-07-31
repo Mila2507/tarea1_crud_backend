@@ -21,6 +21,11 @@ public class ProductoController {
         return ResponseEntity.ok(productoService.listar());
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<Producto> obtener(@PathVariable Long id) {
+        return ResponseEntity.ok(productoService.obtener(id));
+    }
+
     @PostMapping
     public ResponseEntity<Producto> crear(@RequestBody Producto producto) {
         return ResponseEntity.ok(productoService.guardar(producto));
